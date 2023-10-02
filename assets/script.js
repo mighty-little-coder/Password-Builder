@@ -23,15 +23,25 @@ function writePassword() {
 generateBtn.addEventListener("click", writePassword);
 
 var charLength = window.prompt("How many characters would you like your password to contain? (Min. characters of 8. Max characters of 128.)");
+console.log(charLength);
 
 var charSpecial = window.confirm("Click OK to confirm including special characters.")
+console.log(charSpecial);
 
 var charNumeric = window.confirm("Click OK to confirm including numeric characters.")
+console.log(charNumeric)
 
 var charCaselow = window.confirm("Click OK to confirm including lowercase characters.")
+console.log(charCaselow)
 
 var charCasehigh = window.confirm("Click OK to confirm including uppercase characters.")
+console.log(charCasehigh)
 
+var charArrayCaselow = ["abcdefghijklmnopqrstuvwxyz"]
+
+var charArrayCasehigh = ["ABCDEFGHIJKLMNOPQRSTUVWXYZ"]
+
+var numArray = ["123456789"]
 
 
 // 8-128 characters
