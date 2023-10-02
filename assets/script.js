@@ -16,14 +16,21 @@ function writePassword() {
 
 }
 
-function generatePassword() {
-  return //generated password.
-}
+// function generatePassword() {
+//   return //generated password.
+// }
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
+var charLength = window.prompt("How many characters would you like your password to contain? (Min. characters of 8. Max characters of 128.)");
 
+var charSpecial = window.confirm("Click OK to confirm including special characters.")
 
+var charNumeric = window.confirm("Click OK to confirm including numeric characters.")
+
+var charCaselow = window.confirm("Click OK to confirm including lowercase characters.")
+
+var charCasehigh = window.confirm("Click OK to confirm including uppercase characters.")
 
 
 
