@@ -12,8 +12,18 @@ function writePassword() {
 
 function generatePassword() {
   var charLength = window.prompt("How many characters would you like your password to contain? (Min. characters of 8. Max characters of 128.)");
+
+  // To prevent user inputting undesired password length
+  if (!charLength)return""
+  if (charLength < 8 || charLength > 128) {
+    window.alert("Check character length")
+    return""
+  }
+
 console.log(charLength);
-// if charLength < 8 || charLength > 128
+
+
+
 var charSpecial = window.confirm("Click OK to confirm including special characters.")
 console.log(charSpecial);
 
@@ -53,7 +63,7 @@ console.log(chosenVariables)
 var createdPassword = ""
 
 for (let i = 0; i < charLength; i++) {
-  createdPassword = createdPassword + chosenVariables.charAt(Math.floor(Math.random()*chosenVariables.length))
+  createdPassword = createdPassword + chosenVariables[(Math.floor(Math.random()*chosenVariables.length))]
 }
 
   return createdPassword //generated password.
@@ -61,18 +71,13 @@ for (let i = 0; i < charLength; i++) {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-function myFunction() {
-  // Get the text field
+function copyFunc() {
   var copyText = document.getElementById("password");
 
-  // Select the text field
   copyText.select();
   copyText.setSelectionRange(0, 128); // For mobile devices
 
-   // Copy the text inside the text field
   navigator.clipboard.writeText(copyText.value);
 
-  // Alert the copied text
   alert("Copied the text: " + copyText.value);
 }
-
