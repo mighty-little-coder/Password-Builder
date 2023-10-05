@@ -71,7 +71,7 @@ for (let i = 0; i < charLength; i++) {
 // Add event listener to generate button
 generateBtn.addEventListener("click", writePassword);
 
-function copyFunc() {
+  function copyFunc() {
   var copyText = document.getElementById("password");
 
   copyText.select();
