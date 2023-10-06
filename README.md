@@ -5,6 +5,8 @@
 
 This password generator is designed to randomly generate a string of characters, provided by the user, to create a secure and randomized password. This is accomplished through various window prompts and confirms. Additionally, there is a copy to clipboard function added so the user is able to easily duplicate the password and store it to the clipboard.
 
+![Application in Action](./assets/images/passgen.png)
+
 This feature was brand new to me and required some research to accomplish.
 
 
